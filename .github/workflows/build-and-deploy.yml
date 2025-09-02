@@ -28,7 +28,9 @@ jobs:
           cache: 'npm'
 
       - name: Install Dependencies
-        run: npm ci
+        run: |
+          npm install
+          npm audit fix
 
       - name: Install Serverless
         run: npm install -g serverless
